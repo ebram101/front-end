@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Development Project</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Mijn Frontend Project</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li> <!-- Link to Home section -->
+                <li><a href="#about">Over</a></li> <!-- Link to About section -->
+                <li><a href="#contact">Contact</a></li> <!-- Link to Contact section -->
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <h2>Welkom</h2>
+            <p>Dit is de homepage van mijn project.</p>
+        </section>
+
+        <section id="about">
+            <h2>Over Mij</h2>
+            <p>Hier vertel ik iets over mezelf en mijn project.</p>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <form id="contactForm">
+                <label for="name">Naam:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <button type="submit">Verzenden</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Mijn Project</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
