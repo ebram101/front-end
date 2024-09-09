@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimalistic Login</title>
+    <link rel="stylesheet" href="styles.css">
+
+  </head>
+  <body>
+    <div class="login-container">
+      <h2>Login</h2>
+      <form id="loginForm" onsubmit="return handleLogin(event)">
+          <input type="text" id="username" placeholder="Username" required>
+          <input type="password" id="password" placeholder="Password" required>
+          <button type="submit">Login</button>
+          <p id="error-message"></p>
+      </form>
+    </div>
+    
+    <footer>
+      <p>&copy; Ebram & Pedro 2024</p>
+    </footer>
+    
+    <script src="script.js"></script>
+  </body>
+</html>

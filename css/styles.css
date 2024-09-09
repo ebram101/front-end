@@ -20,7 +20,7 @@ body {
 
 /* Header met Flexbox voor centreren van inhoud */
 header {
-    background-color: #4CAF50; /* Primaire kleur: groen */
+    background-color: limegreen; /* Primaire kleur: groen */
     color: #fff;
     display: flex;
     justify-content: space-between;
@@ -49,7 +49,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #FFEB3B; /* Geel als hover-effect */
+    color: beige; /* Geel als hover-effect */
 }
 
 /* Main layout met CSS Grid */
@@ -119,12 +119,12 @@ form button:hover {
 
 /* Footer styling */
 footer {
-    background-color: #4CAF50;
+    background-color: limegreen;
     color: #fff;
     text-align: center;
     padding: 15px 0;
-    grid-row: 3;
     font-size: 0.9rem;
+    grid-row: 3;
 }
 
 /* Responsief ontwerp */
