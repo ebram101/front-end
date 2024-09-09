@@ -1,142 +1,141 @@
-/* Algemeen */
-body {
-    font-family: 'Roboto', sans-serif;
+/* Algemene stijlen */
+* {
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
     color: #333;
     display: grid;
     grid-template-rows: auto 1fr auto;
-    height: 100vh; /* Zorgt ervoor dat de body de volledige hoogte vult */
+    min-height: 100vh;
 }
 
-/* Kleurenpalet:
-   - Achtergrondkleur: #f9f9f9 (lichtgrijs)
-   - Primaire kleur: #4CAF50 (groen)
-   - Secundaire kleur: #1E88E5 (blauw)
-   - Accentkleur: #FF5722 (oranje)
-   - Tekstkleur: #333 (donkergrijs)
-*/
-
-/* Header met Flexbox voor centreren van inhoud */
+/* Header styles */
 header {
-    background-color: #4CAF50; /* Primaire kleur: groen */
-    color: #fff;
+    background-color: #007bff;
+    color: white;
+    padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    text-align: center;
 }
 
 header h1 {
-    margin: 0;
-    font-size: 2.2rem;
+    font-size: 24px;
 }
 
 nav ul {
-    list-style-type: none;
-    padding: 0;
     display: flex;
-    gap: 20px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-nav ul li a:hover {
-    color: #FFEB3B; /* Geel als hover-effect */
-}
-
-/* Main layout met CSS Grid */
-main {
-    display: grid;
-    grid-template-columns: 1fr;
-    padding: 20px;
-}
-
-/* Standaard styling voor de secties */
-section {
-    margin-bottom: 20px;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Zacht schaduweffect voor diepte */
-    border-radius: 8px; /* Afgeronde hoeken */
-}
-
-section h2 {
-    border-bottom: 2px solid #1E88E5; /* Secundaire kleur: blauw */
-    padding-bottom: 10px;
-    font-size: 1.8rem;
-    color: #1E88E5; /* Blauwe kleur voor titels */
-}
-
-/* Formulier styling */
-form {
-    display: grid;
+    list-style: none;
     gap: 15px;
 }
 
-form label {
-    display: block;
-    margin-bottom: 5px;
-    color: #333;
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    background-color: #0056b3;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background-color: #004080;
+}
+
+/* Main section styles */
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 20px;
+}
+
+section {
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact form styles */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
     font-weight: bold;
 }
 
-form input {
+input {
     padding: 10px;
-    width: 100%;
     border: 1px solid #ccc;
     border-radius: 5px;
-    box-sizing: border-box;
-    font-size: 1rem;
+    font-size: 16px;
 }
 
-form input:focus {
-    border-color: #1E88E5; /* Blauwe rand bij focus */
-    outline: none;
-}
-
-form button {
+button {
     padding: 10px 20px;
-    background-color: #FF5722; /* Accentkleur: oranje */
-    color: #fff;
+    background-color: #007bff;
+    color: white;
     border: none;
-    cursor: pointer;
-    font-size: 1.1rem;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
+    cursor: pointer;
 }
 
-form button:hover {
-    background-color: #E64A19; /* Donkerder oranje bij hover */
+button:hover {
+    background-color: #0056b3;
 }
 
-/* Footer styling */
+/* Footer styles */
 footer {
-    background-color: #4CAF50;
-    color: #fff;
+    background-color: #343a40;
+    color: white;
     text-align: center;
-    padding: 15px 0;
-    grid-row: 3;
-    font-size: 0.9rem;
+    padding: 20px;
 }
 
-/* Responsief ontwerp */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 1.8rem;
-    }
-    nav ul {
-        flex-direction: column;
-        gap: 10px;
-    }
-    section h2 {
-        font-size: 1.5rem;
-    }
+/* Login section styles */
+#login {
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#loginForm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#loginForm label {
+    font-weight: bold;
+}
+
+#loginForm input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#loginForm button {
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#loginForm button:hover {
+    background-color: #555;
 }
