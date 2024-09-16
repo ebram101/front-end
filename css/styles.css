@@ -107,13 +107,27 @@ footer {
     grid-row: 3;
 }
 
+h2 {
+    background-color: #2368B7;
+    display: flex;
+    justify-content: center;
+    height: 80px;
+    font-size: 24px;
+    color: #f8f9fa;
+    align-items: center;
+     
+}
 /* Login section styles */
 
-h2 {
+ .login-header{
+    position: relative;
+    background-color: #2368B7;
     display: flex;
-    justify-content: center; 
+    justify-content: center;
+    height: 80px;
     font-size: 24px;
-    color: #333;
+    color: #f8f9fa;
+    align-items: center;
 }
 
 #login {
@@ -135,7 +149,7 @@ h2 {
     padding: 20px;
     background-color: #fff;
     border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 4px #0056b3;
 }
 
 #loginForm label {
@@ -151,7 +165,7 @@ h2 {
 
 #loginForm button {
     padding: 10px;
-    background-color: #333;
+    background-color: #0056b3;
     color: white;
     border: none;
     border-radius: 5px;
@@ -160,6 +174,6 @@ h2 {
 }
 
 #loginForm button:hover {
-    background-color: #555;
+    background-color: #004080;
 }
 
