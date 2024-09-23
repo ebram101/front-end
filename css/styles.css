@@ -108,14 +108,15 @@ footer {
 }
 
 h2 {
-    background-color: #2368B7;
+    background-color: #1a4474;
     display: flex;
     justify-content: center;
     height: 80px;
     font-size: 24px;
     color: #f8f9fa;
     align-items: center;
-     
+    margin-bottom: 10px;
+    border-radius: 10px;
 }
 /* Login section styles */
 
