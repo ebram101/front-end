@@ -12,14 +12,14 @@
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
-                    <li>
-                        <a href="#more">More</a>
-                        <ul class="dropdown">
-                            <li><a href="school.html">School</a></li> 
-                            <li><a href="work.html">Work</a></li> 
-                            <li><a href="hobbies.html">Hobbies</a></li> 
-                        </ul>
-                    </li>
+                <li>
+                    <a href="#more">More</a>
+                    <ul class="dropdown">
+                        <li><a href="school.html">School</a></li> 
+                        <li><a href="work.html">Work</a></li> 
+                        <li><a href="hobbies.html">Hobbies</a></li> 
+                    </ul>
+                </li>
                 <li><a class="login" href="login.html">Login</a></li>
             </ul>
         </nav>
@@ -28,7 +28,7 @@
     <main>
         <section id="home">
             <h2>Welkom</h2>
-            <p>Ebram & Pedro twee webdevelopers in ontwikkeling</p>
+            <p>Ebram & Pedro, twee webdevelopers in ontwikkeling.</p>
         </section>
 
         <section id="about">
@@ -38,7 +38,7 @@
 
         <section id="contact">
             <h2>Contact</h2>
-            <form id="contactForm">
+            <form id="contactForm" action="#" method="post"> <!-- Added action and method attributes -->
                 <label for="name">Naam:</label>
                 <input type="text" id="name" name="name" required>
 
