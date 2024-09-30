@@ -52,10 +52,6 @@ nav ul li a:hover {
     background-color: #004080;
 }
 
-nav ul li a:hover {
-    background-color: #004080;
-}
-
 /* Main section styles */
 main {
     display: grid;
@@ -101,6 +97,62 @@ button {
 button:hover {
     background-color: #0056b3;
 }
+
+/* Dropdown styles */
+nav ul li {
+    position: relative; /* Needed for dropdown positioning */
+}
+
+.dropdown {
+    display: none; /* Hide dropdown by default */
+    position: absolute; /* Position it relative to the parent li */
+    top: 100%; /* Position it below the parent */
+    left: 0; /* Align it to the left */
+    background-color: #2368B7; /* Same background color as the header */
+    z-index: 1000; /* Ensure it appears above other elements */
+    max-width: 150px; /* Adjust as necessary */
+}
+
+/* Dropdown styles */
+nav ul li {
+    position: relative; /* Needed for dropdown positioning */
+}
+
+.dropdown {
+    display: none; /* Hide dropdown by default */
+    position: absolute; /* Position it relative to the parent li */
+    top: 100%; /* Position it below the parent */
+    left: 0; /* Align it to the left */
+    margin-top: 10px; /* Move dropdown 5px lower */
+    background-color: #2368B7; /* Same background color as the header */
+    z-index: 1000; /* Ensure it appears above other elements */
+    max-width: 150px; /* Adjust as necessary */
+}
+
+nav ul li:hover .dropdown {
+    display: block; /* Show dropdown on hover */
+}
+
+.dropdown li {
+    width: 100%; /* Set width to fill parent */
+}
+
+.dropdown li a {
+    padding: 15px 20px; /* Increased padding for dropdown links */
+    background-color: #0056b3; /* Background color for dropdown links */
+    display: block; /* Makes the entire area clickable */
+    margin-bottom: 10px; /* Space between dropdown items */
+}
+
+.dropdown li a:last-child {
+    margin-bottom: 0; /* Remove bottom margin for the last item */
+}
+
+.dropdown li a:hover {
+    background-color: #004080; /* Hover color for dropdown links */
+}
+
+
 
 /* Footer styles */
 footer {
