@@ -1,32 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>School</title>
-  <link rel="stylesheet" href="css/styles.css">
-  <header> Ons Frontend Project
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="#about">Over</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="login.html">Login</a></li>
-        <li><a href="school.html">School</a></li> <!-- Link to login page -->
-    </ul>
-    </nav>
-  </header>
-  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet"> <!-- Montserrat Font -->
+    <link rel="stylesheet" href="css/styles.css">
 </head>
-  <body>
-    <section>
-      <h2>School</h2>
-      <p>Wij volgen de opleiding Software Development. Dit is een tweejarige opleiding waarin je wordt opgeleid tot Junior Software Developer. In het tweede jaar loop je stage om praktijkervaring op te doen bij bedrijven.
-      </p>
-      <h2>Ervaring</h2>
-      <div class="experience-bar">
-        <h3>Javascript</h3>
-      </div>
-    </section>
-  </body>
+<body>
+    <header>
+        <h1 class="logo">Ons Front-End Project</h1>
+        <nav class="header">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li>
+                    <a href="#more">More</a>
+                    <ul class="dropdown">
+                        <li><a href="school.html">School</a></li> 
+                        <li><a href="work.html">Work</a></li> 
+                        <li><a href="hobbies.html">Hobbies</a></li> 
+                    </ul>
+                </li>
+                <li><a class="login" href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="card">
+            <h2>School</h2>
+            <p>Informatie over schoolprojecten en cursussen.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; Ebram & Pedro 2024</p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
 </html>

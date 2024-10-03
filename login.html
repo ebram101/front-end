@@ -5,27 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Mijn Project</title>
     <link rel="stylesheet" href="css/styles.css">
-    <a href="index.html" class="back-button">Home</a>
-    <h2 class="login-header">Login</h2>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+    <header>
+        <h1 class="logo">Ons Front-End Project</h1>
+        <nav class="header">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li>
+                    <a href="#more">More</a>
+                    <ul class="dropdown">
+                        <li><a href="school.html">School</a></li> 
+                        <li><a href="work.html">Work</a></li> 
+                        <li><a href="hobbies.html">Hobbies</a></li> 
+                    </ul>
+                </li>
+                <li><a class="login" href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <!-- Login Section -->
-    <section id="login">
-      
-
-        <form id="loginForm">
-            <label for="username">Gebruikersnaam:</label>
-            <input type="text" id="username" name="username" required>
-
-            <label for="password">Wachtwoord:</label>
-            <input type="password" id="password" name="password" required>
-
-            <button type="submit">Inloggen</button>
-
-            <p id="loginMessage" style="color:red; display:none;">Onjuiste gebruikersnaam of wachtwoord!</p>
+    <section id="login" class="login-section">
+        <a href="index.html" class="back-button">← Terug</a>
+        <h2 class="login-header">Login</h2>
+    
+        <form id="loginForm" onsubmit="return validateLogin(event);">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" class="input-field" required>
+    
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" class="input-field" required>
+    
+            <button type="submit" class="btn">Log in</button>
+    
+            <p id="loginMessage" class="error-message">Onjuiste gebruikersnaam of wachtwoord!</p>
         </form>
-    </section>
+    </section>    
 
     <script src="js/script.js"></script>
 </body>

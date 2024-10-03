@@ -5,13 +5,8 @@
     box-sizing: border-box;
 }
 
-p {
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Montserrat', Arial, sans-serif; /* Updated to use Montserrat */
     background-color: #f8f9fa;
     color: #333;
     display: grid;
@@ -24,32 +19,80 @@ header {
     background-color: #2368B7; /* Primaire kleur: blauw */
     color: #fff;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Distribute space between logo and nav */
     align-items: center;
     height: 80px; /* Adjust this value for height */
     padding: 0 20px; /* Optional: Add padding for spacing */
 }
 
-header h1 {
-    font-size: 24px;
+.logo {
+    font-size: 24px; /* Logo font size */
+    color: #fff; /* Logo color */
+    font-weight: bold; /* Bold font for emphasis */
+}
+
+/* Navigation styles */
+nav {
+    background-color: #2368B7; /* Blue background for nav */
+    padding: 10px 20px; /* Padding for nav */
+    display: flex;
+    justify-content: flex-end; /* Align items to the right */
 }
 
 nav ul {
-    display: flex;
-    list-style: none;
-    gap: 15px;
+    display: flex; /* Use flexbox for layout */
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    gap: 15px; /* Space between items */
+}
+
+nav ul li {
+    position: relative; /* Position relative for dropdown positioning */
 }
 
 nav ul li a {
-    color: white;
-    text-decoration: none;
-    padding: 10px 15px;
-    background-color: #0056b3;
-    border-radius: 5px;
+    color: white; /* Text color */
+    text-decoration: none; /* Remove underline */
+    padding: 10px 15px; /* Padding for buttons */
+    background-color: #0056b3; /* Button background color */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth transition for hover */
 }
 
 nav ul li a:hover {
-    background-color: #004080;
+    background-color: #004080; /* Darker blue on hover */
+}
+
+/* Dropdown Styles */
+.dropdown {
+    display: none; /* Hide dropdown by default */
+    position: absolute; /* Position dropdown */
+    background-color: #2368B7; /* Background color */
+    padding: 10px; /* Padding for dropdown */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    z-index: 1000; /* Ensure dropdown appears above other elements */
+}
+
+nav ul li:hover .dropdown {
+    display: block; /* Show dropdown on hover */
+}
+
+.dropdown li {
+    margin: 5px 0; /* Spacing between dropdown items */
+}
+
+.dropdown li a {
+    color: white; /* Text color for dropdown items */
+    text-decoration: none; /* Remove underline */
+    padding: 8px 12px; /* Padding for dropdown items */
+    border-radius: 3px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth transition for hover */
+}
+
+.dropdown li a:hover {
+    background-color: #004080; /* Darker blue on hover for dropdown items */
 }
 
 /* Main section styles */
@@ -60,11 +103,21 @@ main {
     padding: 20px;
 }
 
-section {
+/* Card styles */
+.card {
     padding: 20px;
     background-color: white;
     border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s; /* Transition for hover effect */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+h2 {
+    color: #2368B7; /* Header color matching the header background */
 }
 
 /* Contact form styles */
@@ -98,61 +151,6 @@ button:hover {
     background-color: #0056b3;
 }
 
-/* Dropdown styles */
-nav ul li {
-    position: relative; /* Needed for dropdown positioning */
-}
-
-.dropdown {
-    display: none; /* Hide dropdown by default */
-    position: absolute; /* Position it relative to the parent li */
-    top: 100%; /* Position it below the parent */
-    left: 0; /* Align it to the left */
-    background-color: #2368B7; /* Same background color as the header */
-    z-index: 1000; /* Ensure it appears above other elements */
-    max-width: 150px; /* Adjust as necessary */
-}
-
-/* Dropdown styles */
-nav ul li {
-    position: relative; /* Needed for dropdown positioning */
-}
-
-.dropdown {
-    display: none; /* Hide dropdown by default */
-    position: absolute; /* Position it relative to the parent li */
-    top: 100%; /* Position it below the parent */
-    left: 0; /* Align it to the left */
-    margin-top: 10px; /* Move dropdown 5px lower */
-    background-color: #2368B7; /* Same background color as the header */
-    z-index: 1000; /* Ensure it appears above other elements */
-    max-width: 150px; /* Adjust as necessary */
-}
-
-nav ul li:hover .dropdown {
-    display: block; /* Show dropdown on hover */
-}
-
-.dropdown li {
-    width: 100%; /* Set width to fill parent */
-}
-
-.dropdown li a {
-    padding: 15px 20px; /* Increased padding for dropdown links */
-    background-color: #0056b3; /* Background color for dropdown links */
-    display: block; /* Makes the entire area clickable */
-    margin-bottom: 10px; /* Space between dropdown items */
-}
-
-.dropdown li a:last-child {
-    margin-bottom: 0; /* Remove bottom margin for the last item */
-}
-
-.dropdown li a:hover {
-    background-color: #004080; /* Hover color for dropdown links */
-}
-
-
 
 /* Footer styles */
 footer {
@@ -161,77 +159,125 @@ footer {
     text-align: center;
     padding: 15px 0;
     font-size: 0.9rem;
-    grid-row: 3;
 }
 
-h2 {
-    background-color: #1a4474;
-    display: flex;
-    justify-content: center;
-    height: 80px;
-    font-size: 24px;
-    color: #f8f9fa;
-    align-items: center;
-    margin-bottom: 10px;
-    border-radius: 10px;
-}
-/* Login section styles */
-
- .login-header{
-    position: relative;
-    background-color: #2368B7;
-    display: flex;
-    justify-content: center;
-    height: 80px;
-    font-size: 24px;
-    color: #f8f9fa;
-    align-items: center;
+.login-section {
+    border: 1px solid #ccc; /* Border around the login section */
+    border-radius: 5px; /* Rounded corners */
+    padding: 20px; /* Padding inside the section */
+    max-width: 350px; /* Set a max width for the login section */
+    max-height: 350px;
+    margin: 50px auto; /* Center the section horizontally and add margin on top */
+    background-color: white; /* Background color */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
-#login {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    padding: 20px;
-    background-color: #f4f4f4;
+.login-header {
+    text-align: center; /* Center the header text */
+    color: #2368B7; /* Match header color */
 }
 
-
-
-#loginForm {
+form {
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    max-width: 400px;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 1px 4px #0056b3;
+    gap: 15px; /* Space between form elements */
 }
 
-#loginForm label {
-    font-weight: bold;
-}
-
-#loginForm input {
+input {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
 }
 
-#loginForm button {
+button {
+    padding: 12px 24px; /* Increased padding for a larger button */
+    background-color: #0056b3; /* Slightly darker background color */
+    color: white; /* Text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    margin-bottom: 20px; /* Added margin-bottom for gap */
+}
+
+
+button:hover {
+    background-color: #004080; /* Darker color on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+button:focus {
+    outline: none; /* Remove default focus outline */
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5); /* Custom focus effect */
+}
+
+.back-button {
+    padding: 10px 15px; /* Add padding for a button-like appearance */
+    background-color: #0056b3; /* Background color */
+    color: white; /* Text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    font-size: 16px; /* Font size */
+    display: inline-block; /* Ensure it behaves like a button */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+.back-button:hover {
+    background-color: #004080; /* Darker color on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+.back-button:focus {
+    outline: none; /* Remove default focus outline */
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5); /* Custom focus effect */
+}
+
+/* Styles for input fields */
+.input-field {
+    width: 100%;
     padding: 10px;
-    background-color: #0056b3;
-    color: white;
-    border: none;
+    margin: 10px 0;
+    border: 1px solid #ccc;
     border-radius: 5px;
-    cursor: pointer;
     font-size: 16px;
 }
 
-#loginForm button:hover {
-    background-color: #004080;
+/* Styles for buttons */
+.btn {
+    background-color: #2368B7; /* Use your primary color */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #1a4e8c; /* A darker shade for hover effect */
+}
+
+/* Styles for error message */
+.error-message {
+    color: red;
+    display: none; /* Initially hidden */
+    margin-top: 10px; /* Space above the error message */
+}
+
+/* Added to maintain the layout when showing the error message */
+.login-section {
+    min-height: 300px; /* Set a minimum height to maintain size */
+}
+
+#loginMessage {
+    color: red;
+    margin-top: 15px; /* Increased gap above the message */
+    display: none; /* Initially hidden */
 }
 
