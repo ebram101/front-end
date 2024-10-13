@@ -107,6 +107,19 @@ main {
     padding: 20px;
 }
 
+.centered-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 100vh; /* Full height of the viewport */
+    padding: 20px;
+    gap: 20px; /* Space between h2 and p */
+}
+
+
+
 /* Card styles */
 .card {
     padding: 20px;
@@ -217,7 +230,7 @@ button:hover {
 
 /* Specific style for index page paragraph */
 .index-description {
-    position: absolute;
-    margin: 40px 0; /* Adjust the values as needed */
+    margin: 40px 0; /* Adjust spacing */
     max-width: 500px;
+    text-align: center; /* Center-align text inside */
 }
