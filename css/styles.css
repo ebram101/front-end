@@ -113,8 +113,8 @@ main {
     align-items: center;
     justify-content: center;
     text-align: center;
-    min-height: 100vh; /* Full height of the viewport */
-    padding: 20px;
+    min-height: 10vh; /* Full height of the viewport */
+    padding: 10px;
     gap: 20px; /* Space between h2 and p */
 }
 
@@ -226,6 +226,10 @@ button:hover {
 .login-header {
     text-align: center; /* Center the header text */
     color: #2368B7; /* Match header color */
+}
+
+#loginMessage {
+    display: none
 }
 
 /* Specific style for index page paragraph */
