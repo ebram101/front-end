@@ -27,6 +27,9 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   }
+/* This code is checking if there is an element with the id "contactForm" in the HTML document.
+If such an element exists, it adds an event listener to the form element with the id "contactForm"
+for the "submit" event. */
 
   if (document.getElementById("contactForm")) {
     document
