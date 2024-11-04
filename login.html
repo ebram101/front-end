@@ -1,50 +1,41 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
+    <!-- Meta settings for character encoding and responsive design -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Mijn Project</title>
+
+    <!-- Importing main CSS for styling and Montserrat font -->
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1 class="logo">ProfilePlus</h1>
-        <nav class="header">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li>
-                    <a href="#more">More</a>
-                    <ul class="dropdown">
-                        <li><a href="profile.html">Profile</a></li>
-                        <li><a href="school.html">School</a></li> 
-                        <li><a href="work.html">Work</a></li> 
-                        <li><a href="hobbies.html">Hobbies</a></li> 
-                    </ul>
-                </li>
-                <li><a class="login" href="login.html">Login</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <!-- Login Section -->
-    <section id="login" class="login-section">
-        <!-- <a href="index.html" class="back-button">← Terug</a> -->
-        <h2 class="login-header">Login</h2>
+    <!-- Placeholder for dynamically loaded header content -->
+    <div id="header"></div>
     
-        <form id="loginForm" onsubmit="return validateLogin(event);">
+    <!-- Login Section: Contains the login form for user authentication -->
+    <section id="login" class="login-section">
+        <!-- Login header title -->
+        <h2 class="login-header">Login</h2>
+
+        <!-- Login form with input fields for username and password -->
+        <form id="loginForm">
             <label for="username">Username:</label>
             <input type="text" id="username" name="username" class="input-field" required>
-    
+
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" class="input-field" required>
-    
+
+            <!-- Submit button to log in -->
             <button type="submit" class="btn">Log in</button>
-    
+
+            <!-- Error message displayed for incorrect login credentials -->
             <p id="loginMessage" class="error-message">Onjuiste gebruikersnaam of wachtwoord!</p>
         </form>
-    </section>    
+    </section>
 
+    <!-- Link to external JavaScript file for form validation functionality -->
     <script src="js/script.js"></script>
 </body>
 </html>

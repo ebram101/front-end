@@ -1,36 +1,26 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
+    <!-- Meta settings for character encoding and viewport for responsive design -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet"> <!-- Montserrat Font -->
+
+    <!-- Importing Montserrat font and linking to the external CSS for styles -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <header>
-        <h1 class="logo">ProfilePlus</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li>
-                    <a href="#more">More</a>
-                    <ul class="dropdown">
-                        <li><a href="profile.html">Profile</a></li>
-                        <li><a href="school.html">School</a></li> 
-                        <li><a href="work.html">Work</a></li> 
-                        <li><a href="hobbies.html">Hobbies</a></li> 
-                    </ul>
-                </li>
-                <li><a class="login" href="login.html">Login</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- Header: Includes the logo and the navigation menu with links to other pages -->
+ <div id = "header"></div>
 
+    <!-- Main content: Displays profile information in a card layout -->
     <main>
         <section class="card centered-main">
             <h2>Profile Information</h2>
             <p>Welcome to the profile page. Here you can see more about our team members.</p>
+            
+            <!-- Profile cards for each team member with their image and description -->
             <section class="player-card">
                 <article class="player">
                     <img src="picture/ebram.jpg" alt="Profile picture of Ebram" class="player-img">
@@ -46,9 +36,10 @@
         </section>
     </main>
 
-    <footer>
-        <p>&copy; Ebram & Pedro 2024</p>
-    </footer>
+    <!-- Footer: Contains copyright information -->
+<div id="footer"></div>
+
+    <!-- External JavaScript file for any additional functionality -->
     <script src="js/script.js"></script>
 </body>
 </html>
